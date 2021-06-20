@@ -1,10 +1,17 @@
 import React from 'react'
 
-import { Card } from './card.styles'
+import {
+  Card,
+  CardTitle,
+  CardImage,
+} from './card.styles'
 
-const CardComponent = ({ children }: { children: any }) => (
+const CardComponent = ({ title, image }: { title: string, image: string }) => (
   <Card>
-    {children}
+    <CardTitle>
+      {title}
+    </CardTitle>
+    <CardImage src={image} />
   </Card>
 )
 
